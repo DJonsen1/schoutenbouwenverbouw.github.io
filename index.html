@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Schouten Bouw &amp; Verbouw | Nieuwbouw &amp; Verbouw in Kootwijkerbroek</title>
+<meta name="description" content="Schouten Bouw &amp; Verbouw uit Kootwijkerbroek. Nieuwbouw, verbouw en renovatie met passie en vakmanschap. Sinds 2018.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- ==========================================================================
+     PROJECTEN TOEVOEGEN  —  dit is het enige stuk dat je hoeft aan te passen.
+
+     1. Zet je foto's in de map  images/
+     2. Kopieer hieronder één blok tussen { ... },  plak hem erachter
+        en pas de tekst en de bestandsnamen aan.
+     3. Bestand opslaan, uploaden. Klaar.
+
+     De eerste foto in de lijst is de foto die op de tegel komt te staan.
+     Let op: komma achter elk blok, behalve na het laatste.
+     ========================================================================== -->
+<script>
+const PROJECTEN = [
+
+  {
+    titel:       "Bedrijfshallen",
+    categorie:   "Nieuwbouw",
+    plaats:      "Kootwijkerbroek",
+    jaar:        "2024",
+    omschrijving:"Twee bedrijfshallen gebouwd, van fundering tot complete afwerking. Strak en functioneel neergezet.",
+    fotos: [
+      "images/Hal1.jpg",
+      "images/Hal2.jpg"
+    ]
+  },
+
+  {
+    titel:       "Carport en overkapping",
+    categorie:   "Uitbouw",
+    plaats:      "Barneveld",
+    jaar:        "2024",
+    omschrijving:"Houten carport met overkapping, op maat gemaakt en passend bij de woning.",
+    fotos: [
+      "images/overkapping1.jpg",
+      "images/overkapping2.jpg",
+      "images/overkapping3.jpg",
+      "images/overkapping4.jpg",
+      "images/overkapping5.jpg",
+      "images/overkapping6.jpg"
+    ]
+  },
+
+  /* ----- VOORBEELDBLOK: kopieer deze en vul je eigen gegevens in -----
+  {
+    titel:       "Naam van het project",
+    categorie:   "Verbouw",
+    plaats:      "Ede",
+    jaar:        "2026",
+    omschrijving:"Korte omschrijving van wat er gedaan is.",
+    fotos: [
+      "images/naam-foto-1.jpg",
+      "images/naam-foto-2.jpg"
+    ]
+  },
+  ------------------------------------------------------------------- */
+
+];
+
+/* Foto bovenaan de pagina (hero). Zet je eigen foto in images/ en pas
+   deze regel aan. Laat je hem leeg (""), dan blijft de achtergrond donker. */
+const HERO_FOTO = "images/hero.jpg";
+</script>
+
+<style>
+:root{
+  --dark:#3b2b25; --dark-2:#f1e6d8; --dark-3:#f7f1ea;
+  --gold:#b5784d; --gold-light:#c98b5a; --gold-dark:#8d5c3d;
+  --ink:#2d241f; --muted:#63544b; --line:#dcc8b4; --bg:#fffaf5; --bg-2:#f6efe8;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--ink);background:var(--bg);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+img{display:block;max-width:100%}
+h1,h2,h3{margin:0;line-height:1.15}
+h1,h2{font-family:"Playfair Display",Georgia,serif;font-weight:700}
+a{color:inherit}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+.label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 12px}
+.gold-line{width:60px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-dark));margin:0 0 28px}
+.btn{display:inline-block;padding:14px 30px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  text-decoration:none;border-radius:2px;transition:.25s;cursor:pointer;border:0}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff}
+.btn-gold:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 10px 30px rgba(201,149,106,.3)}
+.btn-outline{border:1px solid rgba(255,255,255,.4);color:#fff;background:transparent}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold-light)}
+section{padding:96px 0; border-top:1px solid rgba(59,43,37,.18)}
+
+/* nav */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(59,43,37,.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+.bar img{height:52px;width:auto;max-width:58vw;object-fit:contain}
+nav{display:flex;gap:34px}
+nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  position:relative;padding:4px 0}
+nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width .3s}
+nav a:hover{color:var(--gold-light)}
+nav a:hover::after{width:100%}
+#burger{display:none;background:none;border:1px solid rgba(255,255,255,.3);border-radius:4px;color:#fff;
+  font-size:20px;line-height:1;padding:8px 12px;cursor:pointer}
+
+/* hero */
+.hero{min-height:82vh;display:flex;align-items:flex-end;padding:140px 0 90px;background:var(--dark);
+  background-size:cover;background-position:center}
+.hero .wrap{max-width:1180px}
+.hero-inner{max-width:640px}
+.hero h1{font-size:clamp(40px,7vw,68px);color:#fff;text-transform:uppercase;margin-bottom:24px}
+.hero h1 span{color:var(--gold-light)}
+.hero p{color:#d1d5db;font-size:18px;margin:0 0 36px;max-width:46ch}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* usp balk */
+.usp{background:linear-gradient(180deg, #f6ecdf 0%, #efe3d3 100%);padding:64px 0}
+.usp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+.usp svg{stroke:var(--gold);fill:none;stroke-width:1.5;width:44px;height:44px;margin:0 auto 14px}
+.usp h3{color:var(--ink);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.usp p{color:var(--muted);font-size:14px;margin:0}
+
+/* projecten */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.head h2{font-size:clamp(30px,4.6vw,46px)}
+.proj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.proj{background:none;border:0;padding:0;font:inherit;color:inherit;text-align:left;cursor:pointer}
+.proj .shot{position:relative;aspect-ratio:3/4;border-radius:8px;overflow:hidden;background:#e5e7eb}
+.proj .shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.proj:hover .shot img{transform:scale(1.05)}
+.proj .shot .none{width:100%;height:100%;display:grid;place-items:center;color:#9ca3af;font-size:13px}
+.proj .ov{position:absolute;inset:0;display:flex;align-items:flex-end;padding:22px;opacity:0;transition:opacity .3s;
+  background:linear-gradient(to top,rgba(0,0,0,.8),transparent 60%)}
+.proj:hover .ov{opacity:1}
+.proj .ov p{color:var(--gold-light);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+.proj .ov h3{color:#fff;font-size:17px}
+.proj .cnt{position:absolute;right:12px;top:12px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;
+  padding:4px 9px;border-radius:99px;letter-spacing:.06em}
+.proj .meta{margin-top:16px}
+.proj .meta h3{font-size:16px;font-weight:600;text-transform:uppercase;letter-spacing:.03em}
+.proj .meta p{margin:2px 0 0;color:var(--muted);font-size:14px}
+.leeg{border:1px dashed var(--line);border-radius:10px;padding:48px;text-align:center;color:var(--muted)}
+
+/* over ons */
+#over-ons{background:#f7f1e9}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about h2{font-size:clamp(30px,4.6vw,46px);margin-bottom:22px}
+.about p{color:#4b5563;margin:0 0 20px}
+.about .photo{aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,#d6d3d1,#a8a29e)}
+.about .photo img{width:100%;height:100%;object-fit:cover}
+
+/* diensten */
+.services{background:#f7f1e9}
+.services .center{text-align:center;margin-bottom:60px}
+.services h2{color:var(--ink);font-size:clamp(30px,4.6vw,46px)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.svc .circle{width:76px;height:76px;margin:0 auto 22px;border-radius:50%;background:rgba(181,120,77,.08);
+  border:1px solid rgba(181,120,77,.18);display:grid;place-items:center}
+.svc svg{width:30px;height:30px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.svc h3{color:var(--ink);font-size:19px;font-weight:600;margin-bottom:10px}
+.svc p{color:var(--muted);font-size:15px;margin:0}
+
+/* contact */
+#contact{background:#f7f1e9}
+.cta{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.cta h2{color:var(--ink);font-size:clamp(30px,4.6vw,46px);margin-bottom:20px}
+.cta p{color:var(--muted);margin:0 0 28px;max-width:44ch}
+.cta .mail{display:inline-block;font-family:"Playfair Display",serif;font-size:clamp(20px,3vw,28px);
+  color:var(--ink);text-decoration:none;margin-bottom:24px;word-break:break-word}
+.cta .mail:hover{color:var(--gold-dark)}
+
+/* footer */
+footer{background:rgba(59,43,37,.96);border-top:1px solid rgba(255,255,255,.08);padding:64px 0 28px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.foot img{height:44px;width:auto;margin-bottom:22px}
+.foot p,.foot a{color:#d8cfc7;font-size:14px;text-decoration:none}
+.foot a:hover{color:#f2d1b0}
+.foot h4{color:#fff;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 16px}
+.foot .row{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
+.foot .row svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:2;flex:none;margin-top:5px}
+.bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;color:#c9b7ab;font-size:12px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* modal */
+#modal{display:none;position:fixed;inset:0;z-index:60;background:rgba(15,15,15,.85);
+  padding:calc(24px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px));overflow:auto}
+#modal.open{display:block}
+.modal-box{width:min(1000px,100%);margin:0 auto;background:#fff;border-radius:14px;overflow:hidden}
+.modal-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 26px;
+  border-bottom:1px solid var(--line)}
+.modal-top h3{font-family:"Playfair Display",serif;font-size:26px}
+.modal-top .sub{color:var(--muted);font-size:14px;margin:6px 0 0}
+#modalClose{background:none;border:0;font-size:30px;line-height:1;color:#9ca3af;cursor:pointer}
+#modalClose:hover{color:var(--ink)}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:26px}
+.gallery img{width:100%;height:300px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+
+@media (max-width:1024px){
+  .proj-grid{grid-template-columns:repeat(2,1fr)}
+  .usp-grid{grid-template-columns:repeat(2,1fr)}
+  .about,.cta,.foot{grid-template-columns:1fr;gap:36px}
+  nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--dark);flex-direction:column;
+    gap:0;padding:8px 4vw 18px;border-bottom:1px solid rgba(255,255,255,.12)}
+  nav.open{display:flex}
+  nav a{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  #burger{display:block}
+}
+@media (max-width:640px){
+  section{padding:64px 0}
+  .proj-grid,.svc-grid,.gallery{grid-template-columns:1fr}
+  .hero{min-height:auto;padding:100px 0 70px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="#home"><img src="images/Schoutenbouwenverbouw.png" alt="Schouten Bouw &amp; Verbouw"></a>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#projecten">Projecten</a>
+      <a href="#over-ons">Over ons</a>
+      <a href="#diensten">Diensten</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="burger" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="label">Vakmanschap in elk detail</p>
+      <h1>Bouwen aan<br><span>mooie</span><br>momenten</h1>
+      <div class="gold-line"></div>
+      <p>Van nieuwbouw tot verbouw. Met oog voor detail, vakmanschap en degelijk werk bouwen wij aan projecten waar u jarenlang van geniet.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="#projecten">Onze projecten</a>
+        <a class="btn btn-outline" href="mailto:info@schoutenbouwenverbouw.nl">Vrijblijvende offerte</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="usp">
+  <div class="wrap usp-grid">
+    <div>
+      <svg viewBox="0 0 24 24"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/><path d="M10 20v-5h4v5"/></svg>
+      <h3>Nieuwbouw</h3><p>Droomhuis op maat</p>
+    </div>
+    <div>
+      <svg viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13"/><path d="M4 12h16"/></svg>
+      <h3>Verbouw</h3><p>Meer ruimte, meer woonplezier</p>
+    </div>
+    <div>
+      <svg viewBox="0 0 24 24"><path d="M12 3l2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z"/></svg>
+      <h3>Kwaliteit</h3><p>Degelijk en afgewerkt</p>
+    </div>
+    <div>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+      <h3>Persoonlijk</h3><p>Eén aanspreekpunt, korte lijnen</p>
+    </div>
+  </div>
+</div>
+
+<section id="projecten">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="label">Ons werk</p>
+        <h2>Recente projecten</h2>
+      </div>
+    </div>
+    <div class="proj-grid" id="projGrid"></div>
+    <div class="leeg" id="projLeeg" style="display:none">Nog geen projecten toegevoegd.</div>
+  </div>
+</section>
+
+<section id="over-ons">
+  <div class="wrap about">
+    <div class="photo"><img src="images/over-ons.jpg" alt="Schouten Bouw en Verbouw aan het werk" onerror="this.remove()"></div>
+    <div>
+      <p class="label">Over ons</p>
+      <h2>Betrouwbaar.<br>Betrokken. Bouwers.</h2>
+      <div class="gold-line"></div>
+      <p>Schouten Bouw &amp; Verbouw is een jong bedrijf, opgericht in 2018. We zijn gevestigd in Kootwijkerbroek, midden in Nederland en voor iedereen makkelijk bereikbaar.</p>
+      <p>Een bedrijf dat ervoor gaat met passie en hart voor het vak. Ons streven is het leveren van degelijk, kwaliteitsgericht werk. Zo houden wij onze klanten tevreden.</p>
+      <p>Een klus is pas geklaard als beide partijen tevreden zijn over het eindresultaat. Door deze dingen aan te houden blijven klanten ons bellen.</p>
+      <a class="btn btn-gold" href="mailto:info@schoutenbouwenverbouw.nl">Contact opnemen</a>
+    </div>
+  </div>
+</section>
+
+<section id="diensten" class="services">
+  <div class="wrap">
+    <div class="center">
+      <p class="label">Wat we doen</p>
+      <h2>Bouw &amp; verbouw</h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="circle"><svg viewBox="0 0 24 24"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/></svg></div>
+        <h3>Woningbouw</h3><p>Nieuwbouw van uw woning, afgestemd op uw wensen en budget.</p>
+      </div>
+      <div class="svc">
+        <div class="circle"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M8 20v-6h8v6"/></svg></div>
+        <h3>Utiliteitsbouw</h3><p>Bedrijfshallen en loodsen. Functioneel en degelijk neergezet.</p>
+      </div>
+      <div class="svc">
+        <div class="circle"><svg viewBox="0 0 24 24"><path d="M14 3l7 7-4 4-7-7z"/><path d="M10 7l-7 7v7h7l7-7"/></svg></div>
+        <h3>Houtbouw &amp; timmerwerk</h3><p>Kapconstructies, overkappingen, kozijnen en maatwerk in hout.</p>
+      </div>
+      <div class="svc">
+        <div class="circle"><svg viewBox="0 0 24 24"><path d="M4 4v5h5"/><path d="M20 20v-5h-5"/><path d="M20 9A8 8 0 006 6M4 15a8 8 0 0014 3"/></svg></div>
+        <h3>Renovatie</h3><p>Complete renovatie van woningen en panden, met behoud van karakter.</p>
+      </div>
+      <div class="svc">
+        <div class="circle"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
+        <h3>Aan- &amp; uitbouw</h3><p>Meer ruimte nodig? Wij bouwen aan wat naadloos aansluit op uw woning.</p>
+      </div>
+      <div class="svc">
+        <div class="circle"><svg viewBox="0 0 24 24"><path d="M13 3L4 14h7v7l9-11h-7z"/></svg></div>
+        <h3>Kleinere klussen</h3><p>Efficiënt uitgevoerd, met zo min mogelijk overlast voor u.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap cta">
+    <div>
+      <p class="label">Plannen voor bouw of verbouw?</p>
+      <h2>Laten we<br>kennismaken.</h2>
+      <p>Wij maken graag vrijblijvend kennis en bespreken uw wensen en mogelijkheden. Een eerste gesprek is altijd kosteloos.</p>
+    </div>
+    <div>
+      <a class="mail" href="mailto:info@schoutenbouwenverbouw.nl">info@schoutenbouwenverbouw.nl</a><br>
+      <a class="btn btn-gold" href="mailto:info@schoutenbouwenverbouw.nl?subject=Aanvraag%20via%20de%20website">Neem contact op</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="images/Schoutenbouwenverbouw.png" alt="Schouten Bouw &amp; Verbouw">
+        <p>Met passie en vakmanschap bouwen wij aan uw plannen. Van nieuwbouw tot verbouw — wij realiseren het.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="row">
+          <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3l2 5-2 1a11 11 0 005 5l1-2 5 2v3a2 2 0 01-2 2C9.7 19 3 12.3 3 5z"/></svg>
+          <a href="tel:+31612109392">06 12 10 93 92</a>
+        </div>
+        <div class="row">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <p style="margin:0">Muldersweg 14<br>3774 TB Kootwijkerbroek</p>
+        </div>
+        <div class="row">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <a href="mailto:info@schoutenbouwenverbouw.nl">info@schoutenbouwenverbouw.nl</a>
+        </div>
+      </div>
+      <div>
+        <h4>Diensten</h4>
+        <p>Nieuwbouw</p><p>Verbouw</p><p>Renovatie</p><p>Houtbouw</p>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>&copy; <span id="jaar"></span> Schouten Bouw &amp; Verbouw. Alle rechten voorbehouden.</span>
+      <span>Kootwijkerbroek · Sinds 2018</span>
+    </div>
+  </div>
+</footer>
+
+<div id="modal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="modal-top">
+      <div>
+        <p class="label" id="mCat" style="margin-bottom:6px"></p>
+        <h3 id="mTitle"></h3>
+        <p class="sub" id="mSub"></p>
+      </div>
+      <button id="modalClose" aria-label="Sluiten">&times;</button>
+    </div>
+    <div class="gallery" id="mGallery"></div>
+  </div>
+</div>
+
+<script>
+document.getElementById('jaar').textContent = new Date().getFullYear();
+
+/* hero-foto */
+if (HERO_FOTO) {
+  document.querySelector('.hero').style.backgroundImage =
+    "linear-gradient(to right, rgba(15,15,15,.95) 0%, rgba(15,15,15,.7) 50%, rgba(15,15,15,.35) 100%), url('" + HERO_FOTO + "')";
+}
+
+/* mobiel menu */
+var nav = document.getElementById('nav');
+document.getElementById('burger').addEventListener('click', function(){ nav.classList.toggle('open'); });
+nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ nav.classList.remove('open'); }); });
+
+/* projecten opbouwen uit PROJECTEN */
+var grid = document.getElementById('projGrid');
+function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
+if (!PROJECTEN.length) {
+  document.getElementById('projLeeg').style.display = 'block';
+} else {
+  PROJECTEN.forEach(function(p, i){
+    var fotos = p.fotos || [];
+    var card = document.createElement('button');
+    card.className = 'proj';
+    card.innerHTML =
+      '<div class="shot">' +
+        (fotos.length
+          ? '<img src="' + esc(fotos[0]) + '" alt="' + esc(p.titel) + '" loading="lazy">'
+          : '<div class="none">Geen foto</div>') +
+        (fotos.length > 1 ? '<span class="cnt">' + fotos.length + " foto's</span>" : '') +
+        '<span class="ov"><span><p>' + esc(p.categorie || '') + '</p><h3>' + esc(p.titel) + '</h3></span></span>' +
+      '</div>' +
+      '<div class="meta"><h3>' + esc(p.titel) + '</h3><p>' +
+        esc([p.categorie, p.plaats, p.jaar].filter(Boolean).join(' · ')) + '</p></div>';
+    card.addEventListener('click', function(){ openModal(i); });
+    grid.appendChild(card);
+  });
+}
+
+/* modal met alle foto's van een project */
+var modal = document.getElementById('modal');
+function openModal(i){
+  var p = PROJECTEN[i];
+  document.getElementById('mCat').textContent = p.categorie || '';
+  document.getElementById('mTitle').textContent = p.titel || '';
+  document.getElementById('mSub').textContent =
+    [ [p.plaats, p.jaar].filter(Boolean).join(' · '), p.omschrijving ].filter(Boolean).join(' — ');
+  var g = document.getElementById('mGallery');
+  g.innerHTML = '';
+  (p.fotos || []).forEach(function(src, n){
+    var img = document.createElement('img');
+    img.src = src; img.alt = (p.titel || '') + ' ' + (n + 1); img.loading = 'lazy';
+    g.appendChild(img);
+  });
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){ modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('modalClose').addEventListener('click', closeModal);
+modal.addEventListener('click', function(e){ if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
